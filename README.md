@@ -8,7 +8,7 @@
 
 Pluginless Nginx cache management solution for wordpress. If you have ngx_cache_purge or nginx_cache_purge modules then some wordpress plugins are available. Check Nginx Helper or Cache Sniper for Nginx. On my side none of them worked as expected so I decided to make my own solution.
 
-## Integration is pretty simple if you are native linux user and manage your own server --<br/>
+## Integration is pretty simple if you are native linux user and managing your own server. Here is the short explanation of proper php-fpm nginx setup --<br/>
 
 #### PHP-FPM-USER (as known as the website user)
 The PHP-FPM user should be a special user that you create for running your website, whether it is Magento, WordPress, or anything.
