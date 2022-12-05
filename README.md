@@ -57,6 +57,7 @@ Before starting make sure the ACL enabled on your environment. Check **/etc/fsta
 8) move **wp-fcgi-notify.service** to **/etc/systemd/system/** and start service **under root**. Check service is started without any error.
 ```
 cp wp-fcgi-notify.service /etc/systemd/system/
+systemctl daemon-reload
 systemctl start wp-fcgi-notify.service
 systemctl enable wp-fcgi-notify.service
 ```
