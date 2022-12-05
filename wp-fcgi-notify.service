@@ -1,0 +1,11 @@
+[Unit]
+Description=Listens fastcgi cache folder for create events and give write permission to PHP-FPM-USER for further purge operations.
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/home/php-fpm-user/scripts/fastcgi_ops.sh --wp-inotify-start
+ExecStop=/home/php-fpm-user/scripts/fastcgi_ops.sh --wp-inotify-stop
+
+[Install]
+WantedBy=multi.user.target
