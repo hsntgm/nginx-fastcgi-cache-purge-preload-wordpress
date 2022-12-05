@@ -220,7 +220,7 @@ admin() {
 inotify-start() {
   # check permission
   if [[ ! $SUDO_USER && $EUID -ne 0 ]]; then
-    echo "You need to run script with this argument under root or sudo privileged user!"
+    echo "You need to run script with this argument under root or via sudo privileged user!"
     exit 1
   fi
 
@@ -272,7 +272,7 @@ inotify-start() {
 inotify-stop() {
   # check permission
   if [[ ! $SUDO_USER && $EUID -ne 0 ]]; then
-    echo "You need to run script with this argument under root or sudo privileged user!"
+    echo "You need to run script with this argument under root or via sudo privileged user!"
     exit 1
   fi
 
