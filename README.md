@@ -51,7 +51,7 @@ Before starting make sure the ACL enabled on your environment. Check **/etc/fsta
 2) change ownership of the script to the **website user** via **chown php-fpm-user:php-fpm-group fastcgi_ops.sh**<br/>
 3) make script executable via **chmod +x fastcgi_ops.sh**<br/>
 4) set your fastcgi cache path, preload domain, website user and mail options on **fastcgi_ops.sh**<br/>
-5) open systemd service file (**wp-fcgi-notify.service**) and set execstart & stop script path e.g. **/home/php-fpm-user/scripts/fastcgi_ops.sh**<br/>
+5) open systemd service file (**wp-fcgi-notify.service**) and set execstart & stop script path e.g. **/home/php-fpm-user/scripts/fastcgi_ops.sh** (keep the script arguments **--wp-inotify-start** and **--wp-inotify-stop**)<br/>
 6) open **functions.php** and set script path e.g. **/home/php-fpm-user/scripts/fastcgi_ops.sh**<br/>
 7) get functions.php codes and add to your **child theme's functions.php**<br/>
 8) move **wp-fcgi-notify.service** to **/etc/systemd/system/** and start service **under root**. Check service is started without any error.
