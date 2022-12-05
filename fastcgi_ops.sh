@@ -66,7 +66,7 @@ hasDirs() {
 
 # cache purge helper function
 purge_helper() {
-  if hasDirs "${fpath:?}"/ >/dev/null 2>&1; then
+  if hasDirs "${fpath}"/ >/dev/null 2>&1; then
     rm -rf "${fpath:?}"/* || { echo "Cannot purge FastCGI cache!"; exit 1; }
   fi
   if [[ -d "${this_script_path}/www.${fdomain}" ]]; then
@@ -169,7 +169,6 @@ preload() {
 # purge fastcgi-cache
 purge() {
   find_pid
-
   # stop ongoing preload process if exist
   if [[ -n "${PIDS}" ]]; then
     for pid in $PIDS
